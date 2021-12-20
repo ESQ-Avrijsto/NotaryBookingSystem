@@ -14,7 +14,7 @@
     @endif
 
     <div class="table-responsive col-lg-8">
-        <a href="/dashboard/posts/create" class="btn btn-primary mb-3"><span data-feather="plus-circle"></span> Tambah Data Klien</a>
+        <a href="/dashboard/klien/create" class="btn btn-primary mb-3"><span data-feather="plus-circle"></span> Tambah Data Klien</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr class=" text-center">

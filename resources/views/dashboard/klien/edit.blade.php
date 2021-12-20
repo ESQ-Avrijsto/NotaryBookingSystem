@@ -5,7 +5,7 @@
     <h1 class="h2">Edit Klien</h1>
   </div>
   <div class="col-lg-8">
-    <form method="POST" action="/dashboard/klien/edit" enctype="multipart/form-data">
+    <form method="POST" action="/dashboard/klien/{{ $klien->id_klien }}" enctype="multipart/form-data">
         @method('put')
         @csrf
         <div class="mb-3">

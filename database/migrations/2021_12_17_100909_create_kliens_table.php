@@ -19,6 +19,7 @@ class CreateKliensTable extends Migration
             $table->string('nama_klien');
             $table->string('alamat');
             $table->integer('no_tlp');
+            $table->timestamps();
         });
     }
 

@@ -27,10 +27,10 @@
             </symbol>
         </svg>
 
-        <title>Notary Booking System - {{ $title }}</title>
+        <title>WPU Blog | {{ $title }}</title>
     </head>
 
-    <body class="bg-light">
+    <body>
 
         @include('partials.navbar')
 
@@ -38,7 +38,7 @@
             @yield('container')
         </div>
 
-        {{-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle text-white"></i></button> --}}
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle text-white"></i></button>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 

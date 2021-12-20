@@ -14,7 +14,9 @@ class KlienController extends Controller
      */
     public function index()
     {
-        return view('dashboard.klien.index');
+        return view('dashboard.klien.index', [
+            'klien' => Klien::all()
+        ]);
     }
 
     /**
@@ -24,7 +26,7 @@ class KlienController extends Controller
      */
     public function create()
     {
-        return view('dashboard.booking.create');
+        return view('dashboard.klien.create');
     }
 
     /**
@@ -44,7 +46,7 @@ class KlienController extends Controller
         ]);
         Klien::create($request->all());
 
-        return redirect()->route('/dashboard/klien/index')->with('Berhasil','Data Berhasil di Input');
+        return redirect('/dashboard/klien')->with('Berhasil', 'New post has been added!');
     }
 
     /**
@@ -55,7 +57,9 @@ class KlienController extends Controller
      */
     public function show(Klien $klien)
     {
-        return view('dashboard.klien.show');
+        return view('dashboard.klien.show', [
+            'klien' => $klien
+        ]);
     }
 
     /**
@@ -66,7 +70,9 @@ class KlienController extends Controller
      */
     public function edit(Klien $klien)
     {
-        return view('dashboard.klien.edit');
+        return view('dashboard.klien.edit', [
+            'klien' => $klien
+        ]);
     }
 
     /**
@@ -87,7 +93,7 @@ class KlienController extends Controller
         ]);
         $klien->update($request->all());
 
-        return redirect()->route('/dashboard/klien/index')->with('Berhasil','Data Berhasil di Perbaharui');
+        return redirect('/dashboard/klien')->with('Berhasil', 'Post has been updated!');
     }
 
     /**
@@ -100,6 +106,6 @@ class KlienController extends Controller
     {
         Klien::destroy($klien->id);
 
-        return redirect('/dashboard/klien/index')->with('Berhasil', 'Data Berhasil Dihapus');
+        return redirect('/dashboard/klien')->with('Berhasil', 'Data Berhasil Dihapus');
     }
 }
