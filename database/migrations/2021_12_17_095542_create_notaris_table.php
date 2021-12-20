@@ -20,6 +20,7 @@ class CreateNotarisTable extends Migration
             $table->string('alamat');
             $table->string('jabatan');
             $table->integer('no_tlp');
+            $table->timestamps();
         });
     }
 

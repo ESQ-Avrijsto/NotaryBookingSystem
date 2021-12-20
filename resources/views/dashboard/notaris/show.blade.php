@@ -10,7 +10,7 @@
                 <p class="card-text">Kontak: {{ $notaris->no_tlp }}</p>
                 <p class="card-text">Jabatan: {{ $notaris->jabatan }}</p>  
 
-            <a class="btn btn-primary d-block my-5" href="/notaris">Kembali</a>
+            <a class="btn btn-primary d-block my-5" href="/dashboard/notaris">Kembali</a>
         </div>
     </div>
 </div>

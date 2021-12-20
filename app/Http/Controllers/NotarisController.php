@@ -14,7 +14,9 @@ class NotarisController extends Controller
      */
     public function index()
     {
-        return view('dashboard.notaris.index');
+        return view('dashboard.notaris.index', [
+            'notaris' => Notaris::all()
+        ]);
     }
 
     /**
@@ -40,11 +42,11 @@ class NotarisController extends Controller
             'id_notaris' => 'required|max:8',
             'jabatan' => 'required|max:20',
             'alamat' => 'required|max:50',
-            'no_tlp' => 'required|max14',
+            'no_tlp' => 'required|max:14',
         ]);
         Notaris::create($request->all());
 
-        return redirect()->route('/dashboard/notaris/index')->with('Berhasil','Data Berhasil di Input');
+        return redirect('/dashboard/notaris')->with('Berhasil', 'New post has been added!');
     }
 
     /**
@@ -55,7 +57,9 @@ class NotarisController extends Controller
      */
     public function show(Notaris $notaris)
     {
-        return view('dashboard.notaris.show');
+        return view('dashboard.notaris.show', [
+            'notaris' => $notaris
+        ]);
     }
 
     /**
@@ -66,7 +70,9 @@ class NotarisController extends Controller
      */
     public function edit(Notaris $notaris)
     {
-        return view('dashboard.notaris.edit');
+        return view('dashboard.notaris.edit', [
+            'notaris' => $notaris
+        ]);
     }
 
     /**
@@ -83,11 +89,11 @@ class NotarisController extends Controller
             'id_notaris' => 'required|max:8',
             'jabatan' => 'required|max:20',
             'alamat' => 'required|max:50',
-            'no_tlp' => 'required|max14',
+            'no_tlp' => 'required|max:14',
         ]);
         $notaris->update($request->all());
 
-        return redirect()->route('/dashboard/notaris/index')->with('Berhasil','Data Berhasil di Perbaharui');
+        return redirect('/dashboard/notaris')->with('Berhasil', 'Post has been updated!');
     }
 
     /**
@@ -100,6 +106,6 @@ class NotarisController extends Controller
     {
         Notaris::destroy($notaris->id);
 
-        return redirect('/dashboard/notaris/index')->with('Berhasil', 'Data Berhasil Dihapus');
+        return redirect('/dashboard/notaris')->with('Berhasil', 'Data Berhasil Dihapus');
     }
 }
