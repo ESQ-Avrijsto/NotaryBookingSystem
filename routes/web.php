@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KlienController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\NotarisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', [
+        "title" => "Home",
+        "active" => 'home'
+    ]);
 });
+
+
+Route::get('/dashboard',function() {
+    return view('dashboard.index');
+});
+
+// --CRUD Notaris
+Route::resource('/dashboard/notaris', NotarisController::class);
+// --CRUD Klien
+Route::resource('/dashboard/klien', KlienController::class);
+// --CRUD Notaris
+Route::resource('/dashboard/booking', BookingController::class);
