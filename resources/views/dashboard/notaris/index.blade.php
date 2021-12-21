@@ -43,7 +43,7 @@
                             <form action="/dashboard/notaris/{{ $notary->id_notaris }}" method="POST" class=" d-inline">
                                 @method('delete')
                                 @csrf
-                                <button class="badge bg-danger border-0" title="Delete" onclick="return confirm('Are you sure you want to delete this notary: {{ $notary->id_notaris }}? ')"><span data-feather="trash-2"></button>
+                                <button class="badge bg-danger border-0" title="Delete" onclick="return confirm('Are you sure you want to delete this data: {{ $notary->id_notaris }}? ')"><span data-feather="trash-2"></button>
                             </form>
                         </td>
                     </tr>

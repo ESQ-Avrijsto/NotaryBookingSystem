@@ -42,7 +42,7 @@ class KlienController extends Controller
             'nama_klien' => 'required|max:80',
             'alamat' => 'required|max:100',
             'no_tlp' => 'required|max:14',
-           
+
         ]);
         Klien::create($request->all());
 
@@ -89,7 +89,7 @@ class KlienController extends Controller
             'nama_klien' => 'required|max:80',
             'alamat' => 'required|max:100',
             'no_tlp' => 'required|max:14',
-           
+
         ]);
         $klien->update($request->all());
 

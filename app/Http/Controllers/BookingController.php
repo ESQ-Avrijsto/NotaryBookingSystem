@@ -14,7 +14,9 @@ class BookingController extends Controller
      */
     public function index()
     {
-        return view('dashboard.booking.index');
+        return view('dashboard.booking.index', [
+            'booking' => Booking::all()
+        ]);
     }
 
     /**
@@ -45,7 +47,7 @@ class BookingController extends Controller
         ]);
         Booking::create($request->all());
 
-        return redirect()->route('/dashboard/booking/index')->with('Berhasil','Data Berhasil di Input');
+        return redirect('/dashboard/booking')->with('Berhasil', 'Data Berhasil ditambah!');
     }
 
     /**
@@ -56,7 +58,9 @@ class BookingController extends Controller
      */
     public function show(Booking $booking)
     {
-        return view('dashboard.booking.show');
+        return view('dashboard.booking.show', [
+            'booking' => $booking
+        ]);
     }
 
     /**
@@ -67,7 +71,9 @@ class BookingController extends Controller
      */
     public function edit(Booking $booking)
     {
-        return view('dashboard.booking.edit');
+        return view('dashboard.booking.edit', [
+            'booking' => $booking
+        ]);
     }
 
     /**
@@ -89,7 +95,7 @@ class BookingController extends Controller
         ]);
         $booking->update($request->all());
 
-        return redirect()->route('/dashboard/booking/index')->with('Berhasil','Data Berhasil di Perbaharui');
+        return redirect('/dashboard/booking')->with('Berhasil', 'Data Berhasil di perbaharui!');
     }
 
     /**
@@ -102,6 +108,6 @@ class BookingController extends Controller
     {
         Booking::destroy($booking->id);
 
-        return redirect('/dashboard/booking/index')->with('Berhasil', 'Data Berhasil Dihapus');
+        return redirect('/dashboard/booking')->with('Berhasil', 'Data Berhasil Dihapus');
     }
 }

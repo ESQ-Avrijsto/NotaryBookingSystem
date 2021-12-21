@@ -10,7 +10,7 @@
                 <p class="card-text">Alamat: {{ $booking->start_date }}</p>
                 <p class="card-text">Kontak: {{ $booking->end_date }}</p>
         
-            <a class="btn btn-primary d-block my-5" href="/booking">Kembali</a>
+            <a class="btn btn-primary d-block my-5" href="/dashboard/booking">Kembali</a>
         </div>
     </div>
 </div>

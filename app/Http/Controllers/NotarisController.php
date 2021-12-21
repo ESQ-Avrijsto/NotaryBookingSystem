@@ -46,7 +46,7 @@ class NotarisController extends Controller
         ]);
         Notaris::create($request->all());
 
-        return redirect('/dashboard/notaris')->with('Berhasil', 'New post has been added!');
+        return redirect('/dashboard/notaris')->with('Berhasil', 'Data Berhasil Ditambah!');
     }
 
     /**
@@ -57,9 +57,11 @@ class NotarisController extends Controller
      */
     public function show(Notaris $notaris)
     {
-        return view('dashboard.notaris.show', [
-            'notaris' => $notaris
-        ]);
+        // return view('dashboard.notaris.show', [
+        //     'notaris' => $notaris
+        // ]);
+        $notaris=Notaris::where('id',$notaris)->first();
+        return view('dashboard.notaris.show');
     }
 
     /**
@@ -105,7 +107,7 @@ class NotarisController extends Controller
     public function destroy(Notaris $notaris)
     {
         Notaris::destroy($notaris->id);
-
-        return redirect('/dashboard/notaris')->with('Berhasil', 'Data Berhasil Dihapus');
+        
+        return redirect('/dashboard/notaris')->with('Berhasil', 'Data berhasil dihapus');
     }
 }

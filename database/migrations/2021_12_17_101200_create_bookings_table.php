@@ -20,6 +20,7 @@ class CreateBookingsTable extends Migration
             $table->string('id_klien')->unique();
             $table->dateTime('start_date');
             $table->dateTime('end_date');
+            $table->timestamps();
         });
     }
 
