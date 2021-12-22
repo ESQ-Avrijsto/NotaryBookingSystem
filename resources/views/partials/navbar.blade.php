@@ -18,6 +18,9 @@
           <li class="nav-item">
             <a class="nav-link  {{ ($active === "/dashboard/booking") ? 'active' : '' }}" href="/dashboard/booking/">Appointment</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link  {{ ($active === "/dashboard/posts") ? 'active' : '' }}" href="/dashboard/posts/">Blog</a>
+          </li>
           {{-- <li class="nav-item">
             <a class="nav-link  {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Categories</a>
           </li> --}}
