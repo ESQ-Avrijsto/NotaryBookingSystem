@@ -14,6 +14,12 @@
         {{-- My Style --}}
         <link rel="stylesheet" href="/css/style.css">
 
+        <!-- My CSS -->
+        <link rel="stylesheet" href="/style/main.css">
+
+        <!--====== Favicon Icon ======-->
+        <link rel="shortcut icon" href="/img/logo.png" type="image/png">
+
         {{-- SVG --}}
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
             <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
