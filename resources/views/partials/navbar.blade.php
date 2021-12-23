@@ -13,16 +13,13 @@
             <a class="nav-link  {{ ($active === "/dashboard/post") ? 'active' : '' }}" href="/dashboard/post/">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link  {{ ($active === "/dashboard/notaris") ? 'active' : '' }}" href="/dashboard/notaris/">Notaris</a>
+            <a class="nav-link  {{ ($active === "/dashboard/notaris") ? 'active' : '' }}" href="/dashboard/notaris/">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link  {{ ($active === "/dashboard/klien") ? 'active' : '' }}" href="/dashboard/klien/">Klien</a>
+            <a class="nav-link  {{ ($active === "/dashboard/klien") ? 'active' : '' }}" href="/dashboard/klien/">FAQs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link  {{ ($active === "/dashboard/booking") ? 'active' : '' }}" href="/dashboard/booking/">Appointment</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link  {{ ($active === "/dashboard/posts") ? 'active' : '' }}" href="/dashboard/posts/">Blog</a>
           </li>
           {{-- <li class="nav-item">
             <a class="nav-link  {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Categories</a>
