@@ -12,10 +12,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
         {{-- My Style --}}
-        <link rel="stylesheet" href="/css/style.css">
+        {{-- <link rel="stylesheet" href="/css/style.css"> --}}
 
         <!-- My CSS -->
-        <link rel="stylesheet" href="/style/main.css">
+        <link rel="stylesheet" href="/css/main.css">
 
         <!--====== Favicon Icon ======-->
         <link rel="shortcut icon" href="/img/logo.png" type="image/png">
@@ -36,13 +36,17 @@
         <title>Notary Booking System - {{ $title }}</title>
     </head>
 
-    <body class="bg-light">
+    <body class="text-white">
 
         @include('partials.navbar')
 
         <div class="container mt-4">
             @yield('container')
         </div>
+
+        <footer class="text-white text-center p-2">
+            <p><a class="text-white fw-bold text-decoration-none" href="https://www.instagram.com/hansaruwa/">Han Sarwa</a> &#169; 2021</p>
+        </footer>
 
         {{-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle text-white"></i></button> --}}
         
